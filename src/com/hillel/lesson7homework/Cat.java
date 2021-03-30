@@ -1,30 +1,30 @@
 package com.hillel.lesson7homework;
 
-public class Dog {
-    public  String name;
+public class Cat {
+    public String name;
     public  int energy;
     public  int appetite;
-    public Dog(){
+    public Cat() {
 
     }
-    public Dog(String name){
+    public Cat(String name) {
         this.name=name;
     }
-    public Dog(String name, int energy) {
+    public Cat(String name, int energy){
         this.name=name;
         this.energy=energy;
     }
-    public Dog(String name, int energy, int appetite) {
+    public Cat(String name, int energy, int appetite){
         this.name=name;
         this.energy=energy;
         this.appetite=appetite;
     }
+
     public String getName(){
         return name;
     }
-
     public void setName(String name) {
-        this.name = name;
+        this.name=name;
     }
     public int getEnergy(){
         return energy;
@@ -38,4 +38,6 @@ public class Dog {
     public void setAppetite(int appetite){
         this.appetite = appetite;
     }
+
+
 }
