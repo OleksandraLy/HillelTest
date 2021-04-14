@@ -9,11 +9,6 @@ import java.util.Scanner;
 public class User {
     static String pathToFile= "C:\\Users\\Олександра\\IdeaProjects\\HillelJavaCourse\\src\\com\\hillel\\lesson9homework\\user.txt";
 
-    public static void main(String[] args) throws IOException {
-        writeText();
-        readText();
-
-    }
     private String name;
     private String surname;
     private String email;
@@ -113,7 +108,7 @@ public class User {
     б). Писать. Ничего не принимает, просто считывает текст с клавиатуры и
     сохраняет введенный текст в файл.*/
 
-    public final static void readText() throws IOException {
+    public final void readText() throws IOException {
         System.out.println("Start reading from file:");
 
         FileReader informationReader = new FileReader(pathToFile);
@@ -121,6 +116,8 @@ public class User {
 
 
         while (enterInformationHere.hasNextLine()) {
+            String a = informationReader.toString();
+
             String informationEntered = enterInformationHere.nextLine();
             System.out.println("Read one string from file:");
             System.out.println(informationEntered);
@@ -129,15 +126,19 @@ public class User {
         enterInformationHere.close();
         informationReader.close();
     }
-        public static void writeText() throws IOException {
-        System.out.println("Please, enter your information here:");
-        Scanner enterYourInformation= new Scanner(System.in);
-        String moreEnteredInformation = enterYourInformation.nextLine();
-
+    public static void writeText() throws IOException {
+        //System.out.println("Please, enter your information here:");
 
         FileWriter userFileWriter= new FileWriter(pathToFile);
-        userFileWriter.write(moreEnteredInformation);
-        enterYourInformation.close();
+        System.out.println("Enter text to write in file:");
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Print finish to finish:");
+        String nextLineString;
+
+        while (!(nextLineString=scanner.nextLine()).equals("finish")) {
+            userFileWriter.write(nextLineString);
+        }
+        //scanner.close();
         userFileWriter.close();
 
     }

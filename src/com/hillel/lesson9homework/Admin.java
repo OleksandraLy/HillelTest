@@ -17,15 +17,15 @@ public final class Admin extends User{
     }
     public static void deleteFileMethod(){
         System.out.println("Enter Содержит/не содержит:");
-        Scanner check2 = new Scanner (System.in);
-        String containsOrNot= check2.nextLine();
+        Scanner scanner = new Scanner (System.in);
+        String containsOrNot= scanner.nextLine();
         if (containsOrNot.equalsIgnoreCase("Содержит")){
             File checkedFile = new File (pathToFile);
             checkedFile.delete();
         } else {
             System.out.println("File does not contain the string");
         }
-        check2.close();
+        scanner.close();
     }
 
 }

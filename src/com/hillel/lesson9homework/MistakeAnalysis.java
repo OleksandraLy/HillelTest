@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class NewClass9 {
+public class MistakeAnalysis {
     static String pathToFile2= "C:\\Users\\Олександра\\IdeaProjects\\HillelJavaCourse\\src\\com\\hillel\\lesson9homework\\user2.txt";
     public static void main(String[] args) throws IOException {
         writeText();
@@ -32,26 +32,20 @@ public class NewClass9 {
     public static void writeText() throws IOException {
         //System.out.println("Please, enter your information here:");
 
-
-
         FileWriter userFileWriter= new FileWriter(pathToFile2);
-        boolean isContinue=true;
-        while (isContinue) {
-            System.out.println("Enter text to write in file:");
-            Scanner enterYourInformation= new Scanner(System.in);
-            String moreEnteredInformation = enterYourInformation.nextLine();
-            userFileWriter.write(moreEnteredInformation);
-            System.out.println("Print end to finish:");
-            String signalToStopWriting= new String("end");
-            boolean toFinishIfEnd=signalToStopWriting.equalsIgnoreCase(moreEnteredInformation);
-            if (toFinishIfEnd =true) {
-                isContinue=false;
-                enterYourInformation.close();
+        System.out.println("Enter text to write in file:");
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Print end to finish:");
+        String nextLineString;
+
+        while (!(nextLineString=scanner.nextLine()).equals("finish")) {
+            userFileWriter.write(nextLineString);
             }
-        }
+        //scanner.close();
+        userFileWriter.close();
         //userFileWriter.write("Твій голос - музика, чому ж тобі \nНесуть печаль ясні музичні звуки?\nЧом любиш те");
 
-        userFileWriter.close();
+
 
     }
 }

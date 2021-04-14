@@ -18,35 +18,27 @@ public final class Support extends User{
         super(name, surname,email, password,sex,country);
     }
     public static void main(String[] args) throws IOException {
-        checkStringMethod();
+
     }
 
-public static void checkStringMethod() throws IOException {
+public static boolean isFileContainsString(String stringToCheck) throws IOException {
     System.out.println("Please enter check word:");
-    Scanner checkString = new Scanner (System.in);
-    String stringToCheck = checkString.nextLine();
-    checkString.close();
 
-
-    FileReader readFromTheFile = new FileReader(pathToFile);
+boolean fileContainsString=false;
+    FileReader fileReader = new FileReader(pathToFile);
     System.out.println("Start comparing with file");
-    Scanner enterInformationHere = new Scanner(readFromTheFile);
+    Scanner scanner = new Scanner(fileReader);
 
-
-    while (enterInformationHere.hasNextLine()) {
-        String informationString = enterInformationHere.nextLine();
-        if (stringToCheck.contains(informationString)) {
-            System.out.println("Содержит");
-        } else {
-            System.out.println("Не содержит");
+    while (scanner.hasNextLine()) {
+        String line = scanner.nextLine();
+        if (line.equals(stringToCheck)) {
+            fileContainsString=true;
         }
     }
-
-    enterInformationHere.close();
-    readFromTheFile.close();
-
-
+    scanner.close();
+    fileReader.close();
+return fileContainsString;
+    }
 }
 
 
-}
