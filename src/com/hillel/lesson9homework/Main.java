@@ -20,9 +20,7 @@ Admin admin = new Admin("Flora", "Owens");
 Support support = new Support ("Olivia","Price");
 user.writeText();
 user.readText();
-String  stringToCheck = "Practice makes perfect";
-        boolean fileContainsString = support.isFileContainsString(stringToCheck);
-        System.out.println(fileContainsString);
+
 
         if (user instanceof User){
             System.out.println(user);;
@@ -31,6 +29,8 @@ String  stringToCheck = "Practice makes perfect";
             admin.deleteFileMethod();
         }
         if (support instanceof Support){
+            String  stringToCheck = "Practice makes perfect";
+            boolean fileContainsString = support.isFileContainsString(stringToCheck);
             System.out.println(fileContainsString);
         }
     }
