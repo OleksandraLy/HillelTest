@@ -19,6 +19,11 @@ public class Main {
             SecondClassWithMistakes.method4();
         } catch (CustomException e) {
             System.out.println(e.getMessage());
+        } finally {
+            System.out.println("finally exception is caught");
         }
+    }
+    public static void catchCatchMistake() throws CustomException{
+        try {
     }
 }

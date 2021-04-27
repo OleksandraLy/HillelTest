@@ -53,7 +53,7 @@ return myArrayList;
             for (int n=1; n<=2; n++) {
                 if (myArrayList instanceof Class3){
                     iterator.next();
-                    n++;} (n> 2) iterator.remove();
+                    n++;} if (n> 2) iterator.remove();
                 }
             }
 return myArrayList;
