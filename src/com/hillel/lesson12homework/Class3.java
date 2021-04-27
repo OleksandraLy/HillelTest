@@ -3,7 +3,7 @@ package com.hillel.lesson12homework;
 import java.util.Scanner;
 
 public class Class3 {
-    private String oneMoreString;
+    private int z;
     private int h;
     private int i;
     public void method3(){
@@ -13,18 +13,18 @@ public class Class3 {
         System.out.println(string);
         scanner.close();
     }
-    public Class3 (String oneMoreString, int h, int i){
-        this.oneMoreString=oneMoreString;
+    public Class3 (int z, int h, int i){
+        this.z=z;
         this.h=h;
         this.i=i;
     }
 
-    public String getOneMoreString() {
-        return oneMoreString;
+    public int getZ() {
+        return z;
     }
 
-    public void setOneMoreString(String oneMoreString) {
-        this.oneMoreString = oneMoreString;
+    public void setZ(int z) {
+        this.z = z;
     }
 
     public int getH() {
@@ -46,7 +46,7 @@ public class Class3 {
     @Override
     public String toString() {
         return "Class3{" +
-                "oneMoreString='" + oneMoreString + '\'' +
+                "z=" + z +
                 ", h=" + h +
                 ", i=" + i +
                 '}';

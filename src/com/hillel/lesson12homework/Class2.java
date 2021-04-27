@@ -1,25 +1,25 @@
 package com.hillel.lesson12homework;
 
 public class Class2 {
-    private String someString;
+    private int y;
     private int f;
     private int g;
 
     public void method2(){
         System.out.println("Welcome to Mars!");
     }
-    public Class2 (String someString, int f, int g){
-        this.someString=someString;
+    public Class2 (int y, int f, int g){
+        this.y=y;
         this.f=f;
         this.g=g;
     }
 
-    public String getSomeString() {
-        return someString;
+    public int getY() {
+        return y;
     }
 
-    public void setSomeString(String someString) {
-        this.someString = someString;
+    public void setY(int y) {
+        this.y = y;
     }
 
     public int getF() {
@@ -41,7 +41,7 @@ public class Class2 {
     @Override
     public String toString() {
         return "Class2{" +
-                "someString='" + someString + '\'' +
+                "y=" + y +
                 ", f=" + f +
                 ", g=" + g +
                 '}';

@@ -4,14 +4,14 @@ import java.util.Random;
 
 public class Class1 {
     private int a;
-    private String string;
+    private int x;
     private int b;
     private int c;
     private int d;
     private int e;
-    public Class1 (int a, String string){
+    public Class1 (int a, int x){
         this.a =a;
-        this.string=string;
+        this.x=x;
     }
 
     public int getA() {
@@ -22,12 +22,12 @@ public class Class1 {
         this.a = a;
     }
 
-    public String getString() {
-        return string;
+    public int getX() {
+        return x;
     }
 
-    public void setString(String string) {
-        this.string = string;
+    public void setX(int x) {
+        this.x = x;
     }
 
     public int getB() {
@@ -71,7 +71,7 @@ public class Class1 {
     public String toString() {
         return "Class1{" +
                 "a=" + a +
-                ", string='" + string + '\'' +
+                ", x=" + x +
                 ", b=" + b +
                 ", c=" + c +
                 ", d=" + d +
