@@ -8,7 +8,7 @@ public class House3 {
     private Table theTable;
 
     public House3 (Mirror theMirror) {
-        this("wooden","triangular");
+        //this("wooden","triangular");
         this.theMirror=theMirror;
     }
 
@@ -54,7 +54,7 @@ public class House3 {
     public Table getTheTable() {
         return theTable;
     }
-    public Table setTheTable() {
+    public void setTheTable() {
         this.theTable=theTable;
     }
 }

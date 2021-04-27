@@ -126,7 +126,7 @@ public class User {
         enterInformationHere.close();
         informationReader.close();
     }
-    public static void writeText() throws IOException {
+    public void writeText() throws IOException {
         //System.out.println("Please, enter your information here:");
 
         FileWriter userFileWriter= new FileWriter(pathToFile);
