@@ -8,10 +8,10 @@ public class SecondClassWithMistakes {
     public static void method4()throws CustomException{
         ClassWithMistakes.method1();
     }
-    public void method5() throws CustomException{
+    public static void method5() throws CustomException{
         ClassWithMistakes.method2();
     }
-    public void method6() throws CustomException{
+    public static void method6() throws CustomException{
         ClassWithMistakes.method3();
     }
 }

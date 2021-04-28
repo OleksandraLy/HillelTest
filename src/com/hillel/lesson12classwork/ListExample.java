@@ -3,7 +3,7 @@ package com.hillel.lesson12classwork;
 import java.time.LocalTime;
 import java.util.*;
 
-public class ListExamples {
+public class ListExample {
 
     public static void main(String[] args) {
         List<String> stringArrayList = new ArrayList<>(5);
